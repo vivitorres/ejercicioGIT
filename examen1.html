@@ -1,0 +1,88 @@
+<script>
+    var numero1=5;
+    var numero2=8;
+    
+    if (numero1<numero2){
+        console.log("Numero1 no es mayor que numero2");
+    }
+    
+    if (numero2>=0){
+        console.log("numero2 es positivo");
+    }
+    
+    if (numero1<0){
+        console.log("numero1 es negativo o distinto de cero");
+    }
+    
+    
+    if(numero1++ && numero1 <= numero2){
+        console.log("Incrementar en 1 unidad el valor de numero1 no lo hace mayor o igual que numero2");
+    }
+    
+    </script>
+
+
+
+<script>
+    factorial=5;
+    let temp=1;
+    
+    for (let i= 1; i<= factorial; i++) {    
+        temp *= i;
+     
+    }
+    console.log(temp)
+        
+    </script>
+
+
+
+
+
+<script>
+    let numentero=3
+    temp = numentero/2
+    
+    /*function numentero;*/
+    if (temp && temp %0){
+        console.log("Es un numero par")}
+        else {console.log("Es un numero impar")};
+    
+    </script>
+
+<script>
+    class Persona{
+    nombre;
+    edad; 
+    
+    constructor (nombre,edad){
+        this.nombre=nombre
+        this.edad=edad  
+    }
+    
+    obtDetalles (){
+        console.log(this.nombre)
+        console.log(this.edad)
+    }
+
+
+    class Estudiante extends Persona{
+        calificacion;
+
+    constructor (nombre,edad){
+        super (obtDetalles);
+        this.calificacion;
+    }      
+
+    class Profesor extends Persona {
+        asignatura;
+        nivel;
+
+        constructor (nombre,edad)
+        super (nombre,edad);
+        this.asignatura=asignatura
+        this.nivel=nivel
+
+    }
+    }}
+</script>

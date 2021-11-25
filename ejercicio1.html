@@ -1,13 +1,45 @@
 <script>
-let a=0;
-let b=1;
+    class Persona{
+    nombre;
+    edad; 
+    
+    constructor (nombre,edad){
+        this.nombre=nombre
+        this.edad=edad  
+    }
+    
+    obtDetalles (){
+        console.log(this.nombre)
+        console.log(this.edad)
+    }
 
 
+    class Estudiante extends Persona{
+        calificacion;
 
-for (let numeroDeElementos = 0; numeroDeElementos < 7; numeroDeElementos++) {
-    console.log(a)
-    let c=a+b;
-    a=b;
-    b=c;
+    constructor (nombre,edad){
+        super (obtDetalles);
+        this.calificacion;
+    }      
+
+    class Profesor extends Persona {
+        asignatura;
+        nivel;
+
+        constructor (nombre,edad)
+        super (nombre,edad);
+        this.asignatura=asignatura
+        this.nivel=nivel
+
+    }
 }
-</script>
+
+
+
+    
+
+
+    
+    
+    
+    }

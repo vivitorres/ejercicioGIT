@@ -1,0 +1,175 @@
+/*Punto1*/
+
+<script>
+
+for (i = 0; i<=5; i++) {
+     num_aleatorio= (int)(Math.random()*100);
+     console.log(num_aleatorio)
+
+    if (num_aleatorio % 2 == 0) {
+        console.log("Es un numero par")}
+        else {console.log("Es un numero impar")}
+    }
+
+
+</script>
+
+/*Punto2*/
+
+<script>
+
+    numero1 = 15;
+    numero2 = 2;
+    
+    residuo = numero1%numero2;
+    
+    if (residuo==0)
+      console.log(numero1 + " es múltiplo de " + numero2);
+    else
+      console.log(numero1 + " no es múltiplo de " + numero2);
+    
+    </script>
+
+
+/*Punto3*/
+
+<script>
+
+    const letra = 'e';
+    const palabra = 'examen practico vtex';
+    
+    function contarLetra (palabra, letra)
+    {let contar = 0;
+    for (let i = 0; i < palabra.length; i++) 
+    {if (palabra.charAt(i) == letra){
+        contar += 1;
+        }
+    }
+    return contar;
+    
+    }
+    
+    const result = contarLetra(palabra,letra);
+    console.log("La cantidad de letras: ",letra,"en tu(s) palabra(s) es: ",result)
+    
+    </script>
+
+
+/*Punto4*/
+
+<script>
+
+arrayOriginal = ['a','b','c','d','e'];
+arrayInvertido = []
+
+for (let i = arrayOriginal.length -1; i>=0; i--)
+{
+    arrayInvertido.push(arrayOriginal[i]);
+}
+console.log("Arreglo Original:",arrayOriginal);
+console.log("Arreglo Invertido:",arrayInvertido);
+
+
+</script>
+
+
+/*Punto5*/
+
+<script>
+
+    class Persona
+    {
+        constructor (nombre,apellido,edad)
+        {this.nombre=nombre;
+         this.apellido=apellido;
+         this.edad=edad;
+        }
+        getDetalles(){
+            console.log(this.nombre+""+this.apellido+""+this.edad);
+        }
+    }
+     var persona = new Persona ("Andrea","Vidal",20);
+     persona.getDetalles();
+    
+     class Jugador extends Persona
+     {
+         constructor (nombre,apellido,edad,posicion)
+         {
+            super(nombre,apellido,edad);
+            this.posicion=posicion;
+         }
+    
+         getDetalles(){
+             console.log(this.nombre+""+this.apellido+""+this.edad+)""+this.posicion);
+         }
+    
+         }
+     }
+    
+     class Entrenador extends Persona
+    {
+        constructor(nombre, apellido, edad, añosExperiencia, idFederacion){
+            super(nombre, apellido, edad);
+            this.añosExperiencia = añosExperiencia;
+            
+            //console.log(idFederacion);
+
+            if(idFederacion==undefined){
+                this.idFederacion = 10000 + Math.floor(Math.random() * (99999 - 10000));    
+            }else{
+                this.idFederacion = idFederacion;
+            }
+            
+            
+        }
+        getDetalles(){
+            console.log(this.nombre + " " + this.apellido + " " + this.edad + " " + this.añosExperiencia + " " + this.idFederacion);
+            
+        }
+    }
+
+    
+    
+
+    class Equipo {
+        constructor(_entrenador, _jugadores){
+            this.entrenador = new Entrenador(_entrenador.nombre, _entrenador.apellido, _entrenador.edad, _entrenador.añosExperiencia);
+            //console.log(_entrenador.edad);
+            this.jugadores = _jugadores;
+        }
+
+        getDetalles(){
+            //_entrenador.getDetalles();
+
+            console.log("Detalles Entrenador: " + this.entrenador.nombre + " " + this.entrenador.apellido + " " + this.entrenador.edad + " " + this.entrenador.añosExperiencia + " " + this.entrenador.idFederacion);
+            
+            this.jugadores.forEach(v => {
+                v.getDetalles();
+                
+            });
+            
+
+            
+        }
+    }
+
+    var entrenador1 = new Entrenador('Carlos', 'Sanchez', 50, 15);
+
+    var jugador1 = new Jugador('Fer', 'Torres', 30, 'Defensa');
+    var jugador2 = new Jugador('Carolina', 'Rendon', 32, 'Volante');
+    var jugador3 = new Jugador('Adrian', 'Garcia', 38, 'Portero');
+    var jugador4 = new Jugador('Camilo', 'Tobon', 29, 'Delantero');
+
+    jugador1.getDetalles();
+
+    var jugadores = [];
+    jugadores.push(jugador1);
+    jugadores.push(jugador2);
+    jugadores.push(jugador3);
+    jugadores.push(jugador4);
+
+    var equipo = new Equipo (entrenador1, jugadores);
+    equipo.getDetalles();
+
+    
+    </script>

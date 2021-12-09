@@ -1,0 +1,16 @@
+<script>
+
+for (int i = 0; i<=5; i++) {
+     num_aleatorio= (Math.random()*100);
+
+    if ((int) num_aleatorio % 2 == 0) {
+        console.log("Es un numero par")
+        else console.log("Es un numero impar")
+    }
+
+}
+
+
+</script>
+
+
